@@ -2,7 +2,7 @@
 
 namespace ValueObjects\Tests\Units;
 
-use Tests\Utils\TestCase;
+use ValueObjects\Tests\Utils\TestCase;
 use ValueObjects\Uuid;
 
 class UuidTest extends TestCase
