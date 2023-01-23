@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLibraryTemplate\Tests\Units;
+namespace ValueObjects\Tests\Units;
 
-use PhpLibraryTemplate\Tests\Utils\TestCase;
+use ValueObjects\Tests\Utils\TestCase;
 
 class ExampleTest extends TestCase
 {

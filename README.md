@@ -1,4 +1,4 @@
-# PHP library template
+# PHP Value objects
 
 Template to make libraries in PHP
 
