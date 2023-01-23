@@ -2,8 +2,8 @@
 
 namespace ValueObjects\Tests\Units;
 
+use Tests\Utils\TestCase;
 use ValueObjects\Uuid;
-use PHPUnit\Framework\TestCase;
 
 class UuidTest extends TestCase
 {
