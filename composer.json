@@ -26,6 +26,7 @@
     ],
     "require": {
         "php": "^8.0",
+        "mjaschen/phpgeo": "^4.2",
         "ramsey/uuid": "^4.7"
     },
     "require-dev": {
