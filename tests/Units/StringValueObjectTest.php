@@ -17,17 +17,7 @@ class StringValueObjectTest extends TestCase
     }
 
     /** @test */
-    public function it_should_not_be_empty(): void
-    {
-        $valueObjectNotEmpty = new StringValueObject('Not empty');
-        $valueObjectEmpty = new StringValueObject('');
-
-        $this->assertFalse($valueObjectNotEmpty->isEmpty());
-        $this->assertTrue($valueObjectEmpty->isEmpty());
-    }
-
-    /** @test */
-    public function it_should_return_they(): void
+    public function it_should_not_be_empty_and_empty(): void
     {
         $valueObjectNotEmpty = new StringValueObject('Not empty');
         $valueObjectEmpty = new StringValueObject('');
