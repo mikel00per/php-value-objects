@@ -17,34 +17,34 @@ class IntValueObjectTest extends TestCase
     }
 
     /** @test */
-    public function it_should_be_small(): void
+    public function it_should_be_smaller(): void
     {
         $valueObject1 = new IntValueObject(1);
         $valueObject2 = new IntValueObject(2);
 
-        $this->assertTrue($valueObject1->isSmallerThan($valueObject2));
+        $this->assertTrue($valueObject1->isSmaller($valueObject2));
     }
 
     /** @test */
-    public function it_should_be_small_or_equal_and_it_is_smaller(): void
+    public function it_should_be_smaller_or_equal_and_it_is_smaller(): void
     {
         $valueObject1 = new IntValueObject(1);
         $valueObject2 = new IntValueObject(2);
 
-        $this->assertTrue($valueObject1->isSmallerOrEqualThan($valueObject2));
+        $this->assertTrue($valueObject1->isSmallerOrEqual($valueObject2));
     }
 
     /** @test */
-    public function it_should_be_small_or_equal_and_it_is_equal(): void
+    public function it_should_be_smaller_or_equal_and_it_is_equal(): void
     {
         $valueObject1 = new IntValueObject(1);
         $valueObject2 = new IntValueObject(1);
 
-        $this->assertTrue($valueObject1->isSmallerOrEqualThan($valueObject2));
+        $this->assertTrue($valueObject1->isSmallerOrEqual($valueObject2));
     }
 
     /** @test */
-    public function it_should_be_equals(): void
+    public function it_should_be_equal(): void
     {
         $valueObject1 = new IntValueObject(1);
         $valueObject2 = new IntValueObject(1);
@@ -58,7 +58,7 @@ class IntValueObjectTest extends TestCase
         $valueObject1 = new IntValueObject(2);
         $valueObject2 = new IntValueObject(1);
 
-        $this->assertTrue($valueObject1->isBiggerThan($valueObject2));
+        $this->assertTrue($valueObject1->isBigger($valueObject2));
     }
 
     /** @test */
@@ -67,7 +67,7 @@ class IntValueObjectTest extends TestCase
         $valueObject1 = new IntValueObject(2);
         $valueObject2 = new IntValueObject(1);
 
-        $this->assertTrue($valueObject1->isBiggerOrEqualThan($valueObject2));
+        $this->assertTrue($valueObject1->isBiggerOrEqual($valueObject2));
     }
 
     /** @test */
@@ -76,7 +76,7 @@ class IntValueObjectTest extends TestCase
         $valueObject1 = new IntValueObject(1);
         $valueObject2 = new IntValueObject(1);
 
-        $this->assertTrue($valueObject1->isBiggerOrEqualThan($valueObject2));
+        $this->assertTrue($valueObject1->isBiggerOrEqual($valueObject2));
     }
 
     /** @test */
