@@ -19,20 +19,20 @@ final class Coordinate implements Stringable
         $this->ensureIsValidCoordinate();
     }
 
-    public function latitudeValue(): float
+    public function latitude(): float
     {
         return $this->latitude;
     }
 
-    public function longitudeValue(): float
+    public function longitude(): float
     {
         return $this->longitude;
     }
 
     public function equals(Coordinate $other): bool
     {
-        return $this->latitudeValue() === $other->latitudeValue()
-            && $this->longitudeValue() === $other->longitudeValue();
+        return $this->latitude() === $other->latitude()
+            && $this->longitude() === $other->longitude();
     }
 
     private function ensureIsValidCoordinate(): void
@@ -76,7 +76,6 @@ final class Coordinate implements Stringable
 
     public function __toString()
     {
-        $this->toGeoJson();
         return $this->toDecimalDegrees();
     }
 }
