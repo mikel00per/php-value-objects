@@ -17,14 +17,14 @@ class IntValueObject implements Stringable
         return $this->value;
     }
 
-    public function isSmallerThan(IntValueObject $other): bool
+    public function isSmaller(IntValueObject $other): bool
     {
         return $this->value() < $other->value();
     }
 
-    public function isSmallerOrEqualThan(IntValueObject $other): bool
+    public function isSmallerOrEqual(IntValueObject $other): bool
     {
-        return $this->equals($other) || $this->isSmallerThan($other);
+        return $this->equals($other) || $this->isSmaller($other);
     }
 
     public function equals(IntValueObject $other): bool
@@ -32,14 +32,14 @@ class IntValueObject implements Stringable
         return $this->value() === $other->value();
     }
 
-    public function isBiggerThan(IntValueObject $other): bool
+    public function isBigger(IntValueObject $other): bool
     {
         return $this->value() > $other->value();
     }
 
-    public function isBiggerOrEqualThan(IntValueObject $other): bool
+    public function isBiggerOrEqual(IntValueObject $other): bool
     {
-        return $this->equals($other) || $this->isBiggerThan($other);
+        return $this->equals($other) || $this->isBigger($other);
     }
 
     public function __toString()
