@@ -1,10 +1,10 @@
 <?php
 
-namespace ValueObjects\Tests\Units;
+namespace Shared\Domain\ValueObjects\Tests\Units;
 
 use InvalidArgumentException;
-use ValueObjects\Tests\Utils\TestCase;
-use ValueObjects\Uuid;
+use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
+use Shared\Domain\ValueObjects\Uuid;
 
 class UuidTest extends TestCase
 {

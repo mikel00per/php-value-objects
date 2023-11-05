@@ -1,12 +1,12 @@
 <?php
 
-namespace ValueObjects\Tests\Units;
+namespace Shared\Domain\ValueObjects\Tests\Units;
 
 use Faker\Factory;
 use Faker\Generator;
 use InvalidArgumentException;
-use ValueObjects\Tests\Utils\TestCase;
-use ValueObjects\Email;
+use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
+use Shared\Domain\ValueObjects\Email;
 
 class EmailTest extends TestCase
 {

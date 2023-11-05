@@ -1,9 +1,9 @@
 <?php
 
-namespace ValueObjects\Tests\Units;
+namespace Shared\Domain\ValueObjects\Tests\Units;
 
-use ValueObjects\StringValueObject;
-use ValueObjects\Tests\Utils\TestCase;
+use Shared\Domain\ValueObjects\StringValueObject;
+use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 
 class StringValueObjectTest extends TestCase
 {

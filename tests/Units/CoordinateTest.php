@@ -1,13 +1,12 @@
 <?php
 
-namespace ValueObjects\Tests\Units;
+namespace Shared\Domain\ValueObjects\Tests\Units;
 
 use Faker\Factory;
 use Faker\Generator;
 use InvalidArgumentException;
-use ValueObjects\Coordinate;
-use ValueObjects\Tests\Utils\TestCase;
-use ValueObjects\Uuid;
+use Shared\Domain\ValueObjects\Coordinate;
+use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 
 class CoordinateTest extends TestCase
 {

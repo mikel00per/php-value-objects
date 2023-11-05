@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ValueObjects;
+namespace Shared\Domain\ValueObjects;
 
 use InvalidArgumentException;
 use Location\Coordinate as CoordinateGeo;

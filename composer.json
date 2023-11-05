@@ -7,12 +7,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "ValueObjects\\": "src/"
+            "Shared\\Domain\\ValueObjects\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ValueObjects\\Tests\\": "tests/"
+            "Shared\\Domain\\ValueObjects\\Tests\\": "tests/"
         },
         "classmap": [
             "src/"
