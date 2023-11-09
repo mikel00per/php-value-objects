@@ -5,7 +5,7 @@ namespace Shared\Domain\ValueObjects\Tests\Units;
 use Shared\Domain\ValueObjects\StringValueObject;
 use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 
-class StringValueObjectTest extends TestCase
+final class StringValueObjectTest extends TestCase
 {
     /** @test */
     public function it_should_return_the_value(): void

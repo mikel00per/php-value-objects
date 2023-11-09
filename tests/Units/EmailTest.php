@@ -8,7 +8,7 @@ use InvalidArgumentException;
 use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 use Shared\Domain\ValueObjects\Email;
 
-class EmailTest extends TestCase
+final class EmailTest extends TestCase
 {
     private Generator $faker;
 

@@ -6,7 +6,7 @@ namespace Shared\Domain\ValueObjects;
 
 use Stringable;
 
-class IntValueObject implements Stringable
+readonly class IntValueObject implements Stringable
 {
     public function __construct(protected int $value)
     {
@@ -42,7 +42,7 @@ class IntValueObject implements Stringable
         return $this->equals($other) || $this->isBigger($other);
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return (string) $this->value();
     }

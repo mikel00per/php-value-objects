@@ -8,9 +8,9 @@ use InvalidArgumentException;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use Stringable;
 
-final class Uuid implements Stringable
+final readonly class Uuid implements Stringable
 {
-    public function __construct(protected string $value)
+    public function __construct(private string $value)
     {
         $this->ensureIsValidUuid($value);
     }

@@ -6,7 +6,7 @@ use InvalidArgumentException;
 use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 use Shared\Domain\ValueObjects\Uuid;
 
-class UuidTest extends TestCase
+final class UuidTest extends TestCase
 {
     /** @test */
     public function it_should_create_a_new_uuid(): void

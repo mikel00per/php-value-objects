@@ -8,7 +8,7 @@ use InvalidArgumentException;
 use Shared\Domain\ValueObjects\Coordinate;
 use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 
-class CoordinateTest extends TestCase
+final class CoordinateTest extends TestCase
 {
     private Generator $faker;
 

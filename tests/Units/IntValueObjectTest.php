@@ -5,7 +5,7 @@ namespace Shared\Domain\ValueObjects\Tests\Units;
 use Shared\Domain\ValueObjects\IntValueObject;
 use Shared\Domain\ValueObjects\Tests\Utils\TestCase;
 
-class IntValueObjectTest extends TestCase
+final class IntValueObjectTest extends TestCase
 {
     /** @test */
     public function it_should_return_the_value(): void

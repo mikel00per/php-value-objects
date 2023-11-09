@@ -6,7 +6,7 @@ namespace Shared\Domain\ValueObjects;
 
 use Stringable;
 
-class StringValueObject implements Stringable
+readonly class StringValueObject implements Stringable
 {
     public function __construct(protected string $value)
     {
@@ -27,7 +27,7 @@ class StringValueObject implements Stringable
         return $this->value() === $other->value();
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->value();
     }

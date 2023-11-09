@@ -12,7 +12,7 @@ use Location\Formatter\Coordinate\DMS;
 use Location\Formatter\Coordinate\GeoJSON;
 use Stringable;
 
-final class Coordinate implements Stringable
+final readonly class Coordinate implements Stringable
 {
     public function __construct(private float $latitude, private float $longitude)
     {
@@ -74,7 +74,7 @@ final class Coordinate implements Stringable
             ->format(new GeoJSON());
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->toDecimalDegrees();
     }

@@ -6,7 +6,7 @@ namespace Shared\Domain\ValueObjects;
 
 use Stringable;
 
-class Email implements Stringable
+readonly class Email implements Stringable
 {
     public function __construct(protected string $value)
     {
