@@ -5,6 +5,12 @@
     "keywords": ["library"],
     "homepage": "https://github.com/mikel00per/php-value-objects",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "A. Miguel Morillo",
+            "email": "mike@l00per.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Shared\\Domain\\ValueObjects\\": "src/"
@@ -18,37 +24,31 @@
             "src/"
         ]
     },
-    "authors": [
-        {
-            "name": "Miguel Morillo",
-            "email": "miguelmwilliams@gmail.com"
-        }
-    ],
     "require": {
         "php": "^8.2",
-        "mjaschen/phpgeo": "^4.2",
-        "ramsey/uuid": "^4.7"
+        "mjaschen/phpgeo": "^4",
+        "ramsey/uuid": "^4"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "phpunit/phpunit": "^10.4.0",
-        "squizlabs/php_codesniffer": "^3.7",
-        "vimeo/psalm": "^5.15"
+        "mikelooper/code-style": "^0",
+        "phpunit/phpunit": "^10",
+        "vimeo/psalm": "^5"
     },
     "scripts": {
         "test": [
             "@analyze",
             "@test:unit"
         ],
-        "lint:fix": "phpcbf",
-        "test:unit":  "phpunit --configuration phpunit.xml --no-coverage",
-        "test:coverage": "phpunit --configuration phpunit.xml --coverage-html tmp/coverage",
         "analyze": [
             "@psalm",
             "@lint"
         ],
-        "psalm": "psalm --config=psalm.xml --no-cache",
-        "lint": "phpcs --no-cache"
+        "test:unit": "phpunit --configuration tools/phpunit.xml --no-coverage",
+        "test:coverage": "phpunit --configuration tools/phpunit.xml --coverage-html tmp/coverage",
+        "psalm": "psalm -c tools/psalm.xml",
+        "lint": "ecs check -c tools/ecs.php",
+        "lint:fix": "ecs check --fix -c tools/ecs.php"
     },
     "config": {
         "process-timeout": 0,
