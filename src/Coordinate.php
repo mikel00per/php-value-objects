@@ -29,7 +29,7 @@ final readonly class Coordinate implements Stringable
         return $this->longitude;
     }
 
-    public function equals(Coordinate $other): bool
+    public function equals(self $other): bool
     {
         return $this->latitude() === $other->latitude()
             && $this->longitude() === $other->longitude();

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Shared\Domain\ValueObjects;
 
+use InvalidArgumentException;
 use Stringable;
 
-readonly class Email implements Stringable
+final readonly class Email implements Stringable
 {
     public function __construct(protected string $value)
     {
@@ -18,7 +19,7 @@ readonly class Email implements Stringable
         return $this->value;
     }
 
-    public function equals(Email $other): bool
+    public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }
@@ -31,9 +32,7 @@ readonly class Email implements Stringable
     private function ensureIsValidEmail(string $email): void
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            throw new \InvalidArgumentException(
-                sprintf('<%s> does not allow the value <%s>.', static::class, $email)
-            );
+            throw new InvalidArgumentException(sprintf('<%s> does not allow the value <%s>.', self::class, $email));
         }
     }
 }

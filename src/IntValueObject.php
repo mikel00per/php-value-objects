@@ -6,38 +6,36 @@ namespace Shared\Domain\ValueObjects;
 
 use Stringable;
 
-readonly class IntValueObject implements Stringable
+final readonly class IntValueObject implements Stringable
 {
-    public function __construct(protected int $value)
-    {
-    }
+    public function __construct(protected int $value) {}
 
     public function value(): int
     {
         return $this->value;
     }
 
-    public function isSmaller(IntValueObject $other): bool
+    public function isSmaller(self $other): bool
     {
         return $this->value() < $other->value();
     }
 
-    public function isSmallerOrEqual(IntValueObject $other): bool
+    public function isSmallerOrEqual(self $other): bool
     {
         return $this->equals($other) || $this->isSmaller($other);
     }
 
-    public function equals(IntValueObject $other): bool
+    public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }
 
-    public function isBigger(IntValueObject $other): bool
+    public function isBigger(self $other): bool
     {
         return $this->value() > $other->value();
     }
 
-    public function isBiggerOrEqual(IntValueObject $other): bool
+    public function isBiggerOrEqual(self $other): bool
     {
         return $this->equals($other) || $this->isBigger($other);
     }

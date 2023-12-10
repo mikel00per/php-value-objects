@@ -17,7 +17,7 @@ final readonly class Uuid implements Stringable
 
     public static function random(): self
     {
-        return new Uuid(RamseyUuid::uuid4()->toString());
+        return new self(RamseyUuid::uuid4()->toString());
     }
 
     public function value(): string
@@ -25,7 +25,7 @@ final readonly class Uuid implements Stringable
         return $this->value;
     }
 
-    public function equals(Uuid $other): bool
+    public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }
@@ -38,9 +38,7 @@ final readonly class Uuid implements Stringable
     private function ensureIsValidUuid(string $id): void
     {
         if (!RamseyUuid::isValid($id)) {
-            throw new InvalidArgumentException(
-                sprintf('<%s> does not allow the value <%s>.', static::class, $id)
-            );
+            throw new InvalidArgumentException(sprintf('<%s> does not allow the value <%s>.', self::class, $id));
         }
     }
 }
