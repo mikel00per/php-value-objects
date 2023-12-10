@@ -1,6 +1,6 @@
-# PHP Value objects
+# PHP Value Objects
 
-Template to make libraries in PHP
+Library with common value objects.
 
 ## Make commands
 
