@@ -30,7 +30,7 @@
         "ramsey/uuid": "^4"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
+        "fakerphp/faker": "^1",
         "mikelooper/code-style": "^0",
         "phpunit/phpunit": "^10",
         "vimeo/psalm": "^5"
