@@ -8,7 +8,7 @@ use InvalidArgumentException;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use Stringable;
 
-final readonly class Uuid implements Stringable
+readonly class Uuid implements Stringable
 {
     public function __construct(private string $value)
     {
@@ -20,17 +20,17 @@ final readonly class Uuid implements Stringable
         return new self(RamseyUuid::uuid4()->toString());
     }
 
-    public function value(): string
+    final public function value(): string
     {
         return $this->value;
     }
 
-    public function equals(self $other): bool
+    final public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }
 
-    public function __toString(): string
+    final public function __toString(): string
     {
         return $this->value();
     }

@@ -12,24 +12,24 @@ use Location\Formatter\Coordinate\DMS;
 use Location\Formatter\Coordinate\GeoJSON;
 use Stringable;
 
-final readonly class Coordinate implements Stringable
+readonly class Coordinate implements Stringable
 {
     public function __construct(private float $latitude, private float $longitude)
     {
         $this->ensureIsValidCoordinate();
     }
 
-    public function latitude(): float
+    final public function latitude(): float
     {
         return $this->latitude;
     }
 
-    public function longitude(): float
+    final public function longitude(): float
     {
         return $this->longitude;
     }
 
-    public function equals(self $other): bool
+    final public function equals(self $other): bool
     {
         return $this->latitude() === $other->latitude()
             && $this->longitude() === $other->longitude();
@@ -46,19 +46,19 @@ final readonly class Coordinate implements Stringable
         }
     }
 
-    public function toDecimalDegrees(string $separator = ' ', int $digits = 5): string
+    final public function toDecimalDegrees(string $separator = ' ', int $digits = 5): string
     {
         return (new CoordinateGeo($this->latitude, $this->longitude))
             ->format(new DecimalDegrees($separator, $digits));
     }
 
-    public function toDecimalMinutes(string $separator = ' '): string
+    final public function toDecimalMinutes(string $separator = ' '): string
     {
         return (new CoordinateGeo($this->latitude, $this->longitude))
             ->format(new DecimalMinutes($separator));
     }
 
-    public function toDMS(string $separator = ' ', bool $useCardinalLetters = true): string
+    final public function toDMS(string $separator = ' ', bool $useCardinalLetters = true): string
     {
         return (new CoordinateGeo($this->latitude, $this->longitude))
             ->format(new DMS($separator, $useCardinalLetters, DMS::UNITS_UTF8));
@@ -68,7 +68,7 @@ final readonly class Coordinate implements Stringable
      * @note Float values processed by json_encode() are affected by the ini-setting serialize_precision.
      * You can change the number of decimal places in the JSON output with <ini_set('serialize_precision', 8).
      */
-    public function toGeoJson(): string
+    final public function toGeoJson(): string
     {
         return (new CoordinateGeo($this->latitude, $this->longitude))
             ->format(new GeoJSON());

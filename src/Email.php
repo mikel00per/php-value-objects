@@ -7,19 +7,19 @@ namespace Shared\Domain\ValueObjects;
 use InvalidArgumentException;
 use Stringable;
 
-final readonly class Email implements Stringable
+readonly class Email implements Stringable
 {
     public function __construct(protected string $value)
     {
         $this->ensureIsValidEmail($value);
     }
 
-    public function value(): string
+    final public function value(): string
     {
         return $this->value;
     }
 
-    public function equals(self $other): bool
+    final public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }

@@ -6,21 +6,21 @@ namespace Shared\Domain\ValueObjects;
 
 use Stringable;
 
-final readonly class StringValueObject implements Stringable
+readonly class StringValueObject implements Stringable
 {
     public function __construct(protected string $value) {}
 
-    public function value(): string
+    final public function value(): string
     {
         return $this->value;
     }
 
-    public function isEmpty(): bool
+    final public function isEmpty(): bool
     {
         return empty($this->value());
     }
 
-    public function equals(self $other): bool
+    final public function equals(self $other): bool
     {
         return $this->value() === $other->value();
     }
