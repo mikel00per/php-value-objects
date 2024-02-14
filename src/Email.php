@@ -32,7 +32,7 @@ readonly class Email implements Stringable
     private function ensureIsValidEmail(string $email): void
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-            throw new InvalidArgumentException(sprintf('<%s> does not allow the value <%s>.', self::class, $email));
+            throw new InvalidArgumentException(sprintf('<%s> does not allow the value <%s>.', static::class, $email));
         }
     }
 }
